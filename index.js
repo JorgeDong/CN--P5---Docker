@@ -17,9 +17,10 @@ app.get('/autores', function (req, res) {
 		"autor2": "Jorge Alejandro Dong Llauger"
 	};
 
-	autores = JSON.stringify(autores); 
+	//autores = JSON.stringify(autores); 
+	res.send(autores);
 	res.sendStatus(200);
-  	res.send(autores);
+  	
 });
 
 app.post('/suma', function (req, res) {
