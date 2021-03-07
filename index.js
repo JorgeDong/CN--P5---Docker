@@ -29,8 +29,10 @@ app.post('/suma', function (req, res) {
 		acum+=element;
 	});
 
-	acum = JSON.stringify(acum);  	
-  	res.send(acum);
+	let respuesta = {
+		"respuesta": acum
+	};
+  	res.send(respuesta);
   	res.sendStatus(200);
 });
 
@@ -41,8 +43,10 @@ app.post('/resta', function (req, res) {
 		total-=element;
 	});
 
-	total = JSON.stringify(total);  	
-  	res.send(total);
+	let respuesta = {
+		"respuesta": total
+	};
+  	res.send(respuesta);
   	res.sendStatus(200);
 });
 
@@ -53,7 +57,13 @@ app.post('/multiplica', function (req, res) {
 		acum*=element;
 	});
 
-	acum = JSON.stringify(acum);  	
+	let respuesta = {
+		"respuesta": acum
+	};
+
+  	res.send(respuesta);
+
+	//acum = JSON.stringify(acum);  	
   	res.send(acum);
   	res.sendStatus(200);
 });
