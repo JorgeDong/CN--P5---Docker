@@ -10,6 +10,18 @@ app.get('/', function (req, res) {
   	res.send('Saludos desde express');
 });
 
+
+app.get('/autores', function (req, res) {
+	let autores = {
+		"autor1": "Luis David Gallegos Godoy",
+		"autor2": "Jorge Alejandro Dong Llauger"
+	};
+
+	autores = JSON.stringify(autores); 
+	res.sendStatus(200);
+  	res.send(autores);
+});
+
 app.post('/suma', function (req, res) {
 	let nums = req.body.nums;
 	let acum = 0;
@@ -19,7 +31,7 @@ app.post('/suma', function (req, res) {
 
 	acum = JSON.stringify(acum);  	
   	res.send(acum);
-  	res.sendStatus(200)
+  	res.sendStatus(200);
 });
 
 app.post('/resta', function (req, res) {
@@ -31,7 +43,7 @@ app.post('/resta', function (req, res) {
 
 	total = JSON.stringify(total);  	
   	res.send(total);
-  	res.sendStatus(200)
+  	res.sendStatus(200);
 });
 
 app.post('/multiplica', function (req, res) {
@@ -43,7 +55,7 @@ app.post('/multiplica', function (req, res) {
 
 	acum = JSON.stringify(acum);  	
   	res.send(acum);
-  	res.sendStatus(200)
+  	res.sendStatus(200);
 });
 
 
