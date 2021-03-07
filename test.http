@@ -1,15 +1,51 @@
+###Pruebas del API
 ###
-
-GET http://localhost:3000/autores
+###Autores
+GET http://localhost:8080/autores
 
 ###
-
-POST http://localhost:3000/api/login
+### Suma
+POST http://localhost:8080/suma
 Content-Type: application/json
 
 {
-    "correo":"admin@iteso.mx",
-    "password":"123456"
+ "nums": [1,2,3,4,5]
 }
 
 ###
+### resta
+POST http://localhost:8080/resta
+Content-Type: application/json
+
+{
+	"numToSubs": 20,
+	"nums": [1,2,3,4,5]
+}
+
+###
+### Multiplicación
+POST http://localhost:8080/multiplica
+Content-Type: application/json
+
+{
+ "nums": [1,2,3,4,5]
+}
+
+###
+### división
+POST http://localhost:8080/divide
+Content-Type: application/json
+
+{
+	"numToDiv": 20,
+	"nums": [1,2,3]
+}
+
+###
+### free
+POST http://localhost:8080/free
+Content-Type: application/json
+
+{
+	"operation": "56 * 10 - 8 * 15 / 5 + 8"
+}
